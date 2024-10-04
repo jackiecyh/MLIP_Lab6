@@ -25,15 +25,13 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 source mlip/bin/activate
-                echo 'Past path'
 
                 # TODO Complete the command to run pytest
-                pip install pandas numpy pytest
-                mlip/bin/activate run -n mlip pytest
-                echo 'Past run'
+                # mlip/bin/activate run -n mlip pytest
+                pytest
 
                 echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                #exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
