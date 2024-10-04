@@ -7,8 +7,7 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'In C or Java, we can compile our program in this step'
                 echo 'In Python, we can build our package here or skip this step'
-                '''
-
+                
                 # Create the virtual environment if it does not exist
                 if [ ! -d "mlip" ]; then
                     python3 -m venv mlip
@@ -16,6 +15,7 @@ pipeline {
 
                 # Ensure the activate script is executable
                 chmod +x mlip/bin/activate
+                '''
             }
         }
         stage('Test') {
