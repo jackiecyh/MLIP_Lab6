@@ -15,6 +15,12 @@ pipeline {
 
                 # Ensure the activate script is executable
                 chmod +x mlip/bin/activate
+
+                # Activate the virtual environment
+                source mlip/bin/activate
+
+                # Install the necessary libraries
+                pip install pandas numpy pytest scikit-learn
                 '''
             }
         }
